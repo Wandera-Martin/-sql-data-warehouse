@@ -7,8 +7,8 @@ DROP TABLE IF EXISTS bronze.crm_cust_info;
 CREATE TABLE bronze.crm_cust_info (
     cst_id INTEGER,
     cst_key VARCHAR(50),
-    cst_first_name VARCHAR(50),
-    cst_last_name VARCHAR(50),
+    cst_firstname VARCHAR(50),
+    cst_lastname VARCHAR(50),
     cst_marital_status VARCHAR(50),
     cst_gender VARCHAR(50),
     cst_create_date DATE
@@ -54,8 +54,8 @@ CREATE TABLE bronze.erp_cust_az12 (
 DROP TABLE IF EXISTS bronze.erp_loc_a101;
 
 CREATE TABLE bronze.erp_loc_a101 (
-   cid VARCHAR(50),
-   cntry VARCHAR(50)
+    cid VARCHAR(50),
+    cntry VARCHAR(50)
 );
 
 DROP TABLE IF EXISTS bronze.erp_px_cat_g1v12;
