@@ -31,7 +31,7 @@ CREATE TABLE bronze.crm_prd_info (
 DROP TABLE IF EXISTS bronze.crm_sales_details;
 
 CREATE TABLE bronze.crm_sales_details (
-    sls_ord_num INTEGER,
+    sls_ord_num VARCHAR(50),
     sls_prd_key VARCHAR(50),
     sls_cst_id VARCHAR(50),
     sls_order_dt DATE,
