@@ -1,0 +1,38 @@
+# Resolving the "Permission Denied" Error When Loading Data in PostgreSQL
+
+When attempting to load data using the PostgreSQL `COPY` command, you might encounter the following error:
+
+
+This error occurs because the PostgreSQL server process does not have permission to read the file from the specified location. This is often because the file is located on your local machine, while the server expects the file to be in a location it can access.
+
+## How to Resolve This Issue
+
+There are two primary solutions:
+
+1. Use psql's `\copy` Command
+
+The `\copy` command is a client-side command. It reads the file from your local machine and sends the data to the PostgreSQL server. This method bypasses the server’s file permission restrictions.
+
+Example Usage:
+
+```sql
+\copy bronze.crm_prd_info FROM 'C:\Users\marti\Documents\Projects\-sql-data-warehouse\data\source_crm\prd_info.csv' CSV HEADER
+
+2. Move the File to an Accessible Location
+If you prefer to use the server-side COPY command, you need to ensure that the file is stored in a directory that the PostgreSQL server can access. A quick method is to move the file to a public directory, such as:
+
+C:\Users\Public
+After moving the file, update your COPY command with the new file path:
+
+```sql
+COPY bronze.crm_prd_info
+FROM 'C:\Users\Public\prd_info.csv'
+WITH (
+    FORMAT csv,
+    HEADER true,
+    DELIMITER ','
+);
+
+
+For this project, I attempted both methods and i think the psql method is better,
+but all that depends on the use case.
