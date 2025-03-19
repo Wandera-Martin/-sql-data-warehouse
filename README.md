@@ -1,2 +1,2 @@
 # Data Warehouse and Analytics
- A Modern Data Warehouse with SQL Server, including ETL processes, data modeling, and analytics
+ A Modern Data Warehouse with Postgresql, including ETL processes, data modeling, and analytics
