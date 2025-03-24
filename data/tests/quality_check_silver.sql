@@ -12,5 +12,5 @@ FROM silver.crm_cust_info
 WHERE cst_firstname != TRIM(cst_firstname);
 
 -- Data Standardization & Consistency
-SELECT DISTINCT cst_gender
+SELECT DISTINCT cst_gndr
 FROM silver.crm_cust_info;
