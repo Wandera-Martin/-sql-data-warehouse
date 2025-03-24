@@ -31,7 +31,7 @@ CREATE TABLE bronze.crm_prd_info (
     prd_id INTEGER,
     prd_key VARCHAR(50),
     prd_nm VARCHAR(50),
-    prd_cost VARCHAR(50),
+    prd_cost INTEGER,
     prd_line VARCHAR(50),
     prd_start_dt DATE,
     prd_end_dt DATE
@@ -47,9 +47,9 @@ CREATE TABLE bronze.crm_sales_details (
     sls_order_dt DATE,
     sls_ship_dt DATE,
     sls_due_dt DATE,
-    sls_sales VARCHAR(50),
+    sls_sales INTEGER,
     sls_quantity INTEGER,
-    sls_price VARCHAR(50)
+    sls_price INTEGER
 );
 
 DROP TABLE IF EXISTS bronze.erp_cust_az12;
