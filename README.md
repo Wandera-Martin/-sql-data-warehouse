@@ -84,7 +84,7 @@ data-warehouse-project/
 
 This project is licensed under the [MIT License](LICENSE). You are free to use, modify, and share this project with proper attribution.
 
-## 🌟 Credit to **Data With Baraa**
+## 🌟 Credit to ([**Data With Baraa**](https://github.com/DataWithBaraa))
 
 
 
